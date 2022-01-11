@@ -176,16 +176,27 @@ a {
 	margin-top: 40px;
 	background: #32425c;
 	margin-bottom: 60px;
+	padding: 16px 53px 20px;
 }
 .site-navigation-list {
-	list-style: none;
 	margin: 0;
-	padding: 16px 53px 20px;
+
+	list-style: none;
+	padding-inline: 0;
+	padding-block: 0;
+	margin-inline: 0;
+	margin-block: 0;
 	display: flex;
 	gap: 56px;
 }
+.site-navigation-list ul {
+	padding: 0;
+}
 .site-navigation__item a {
 	color: inherit;
+}
+.site-navigation__item:last-child {
+	padding-right: 0;
 }
 
 /*Footer*/
@@ -198,7 +209,8 @@ a {
 }
 .footer-content {
 }
-.container {
+.footer-navigation {
+	gap: 58px;
 }
 .header-logo {
 }
