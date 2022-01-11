@@ -5,6 +5,9 @@
 * {
 	box-sizing: border-box;
 }
+a {
+	text-decoration: none;
+}
 
 .page-body {
 	background-color: #ffffff;
@@ -43,22 +46,21 @@
 }
 .search-form {
 }
-.site-search {
+.header-site-search {
 	width: 272px;
 	height: 42px;
 }
 .header-cart-interface {
-	margin: 0;
-	padding: 0;
 }
 .cart-interface__list {
 	list-style: none;
 	display: flex;
 	align-items: center;
+	margin: 0;
+	padding: 0;
 }
 .cart-interface__list a {
 	color: inherit;
-	text-decoration: none;
 }
 .bookmarks {
 	margin-left: 20px;
@@ -85,8 +87,13 @@
 	font-size: 16px;
 	line-height: 23px;
 	color: #ee3643;
-	margin: 0;
+	font-weight: 400;
 	grid-area: caption;
+	margin: 0;
+	padding-right: 24px;
+	padding-left: 27px;
+	margin-inline: 0;
+	margin-block: 0;
 }
 
 .tel-box {
@@ -94,10 +101,10 @@
 	border: 3px solid #ffffff;
 	display: inline-block;
 	grid-area: tel;
+	text-align: center;
+	align-self: center;
 }
 .tel-box a {
-	/* width: auto; */
-	text-decoration: none;
 	font: inherit;
 	color: #ee3643;
 	font-size: 21px;
@@ -105,23 +112,29 @@
 	font-weight: 700;
 }
 .header-user-interface {
+	grid-area: interface;
+	justify-self: end;
 }
 .user-interface {
 	list-style: none;
-	grid-area: interface;
 	padding: 0;
 	margin: 0;
+	margin-block: 0;
+	padding-inline: 0;
 }
 .user-interface__item {
 	display: inline-block;
+	margin-left: 10px;
 }
 .header-content {
+	margin-top: 41px;
 	display: grid;
 	grid-template-rows: repeat(2, min-content);
-	grid-template-columns: repeat(3, max-content);
+	grid-template-columns: auto max-content 1fr;
 	grid-template-areas:
 		"caption tel interface"
 		"caption adress .";
+	column-gap: 69px;
 }
 .button {
 	font: inherit;
@@ -149,13 +162,21 @@
 	line-height: 24px;
 	color: #000000;
 	grid-area: adress;
-	/* text-align: center; */
 	margin: 0;
 }
 
-.site-navigation {
+.header-site-navigation {
+	margin-top: 40px;
+	background: #32425c;
+	margin-bottom: 60px;
 }
 .site-navigation-list {
+	list-style: none;
+	margin: 0;
+	padding: 16px 53px 20px;
+	display: flex;
+	gap: 56px;
 }
-.site-navigation__item {
+.site-navigation__item a {
+	color: inherit;
 }
