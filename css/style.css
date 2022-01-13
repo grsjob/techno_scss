@@ -151,9 +151,6 @@ a {
 	text-align: center;
 	vertical-align: middle;
 	border: none;
-	color: #000000;
-	font-size: 21px;
-	line-height: 21px;
 
 	background: #ffffff;
 }
@@ -166,6 +163,12 @@ a {
 }
 .registration {
 	padding: 12px 24px;
+}
+.come-in,
+.registration {
+	color: #000000;
+	font-size: 21px;
+	line-height: 21px;
 }
 .adress {
 	font-size: 14px;
@@ -280,4 +283,84 @@ a {
 	display: flex;
 	align-items: end;
 	gap: 50px;
+}
+
+/*Product catalog*/
+
+.product-catalog__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, max-content);
+	grid-template-areas:
+		"materials tools technics"
+		"slider slider discounts"
+		"slider slider delivery";
+	gap: 20px;
+}
+.catalog-item {
+	background-color: #5fbb2d;
+}
+.catalog-item:nth-child(1) {
+	grid-area: materials;
+	background-color: #ffbf47;
+}
+.catalog-item:nth-child(2) {
+	grid-area: tools;
+	background-color: #3bbce3;
+}
+.catalog-item:nth-child(3) {
+	grid-area: technics;
+	background-color: #dc91d8;
+}
+.catalog-item:nth-child(4) {
+	grid-area: discounts;
+	background-color: #8ed78f;
+}
+.catalog-item:nth-child(5) {
+	grid-area: delivery;
+	background-color: #ffbf47;
+}
+.new-product {
+}
+.catalog-item__title {
+	margin-block: 0;
+}
+.button {
+}
+.catalog-item__button {
+}
+.catalog-item__icon {
+}
+
+/*Promo slider*/
+.promo-slider {
+	min-height: 100%;
+}
+.catalog-slider {
+	grid-area: slider;
+}
+.slide-perforators {
+	background: url("/img/perforators.jpg") no-repeat;
+	min-height: 100%;
+}
+.slide-drills {
+	background: url("/img/drills.jpg") no-repeat;
+	display: none;
+}
+.slider-title-box {
+}
+.slider-title {
+	margin: 0;
+}
+.slider-text {
+	margin: 0;
+}
+.slider-shape__left {
+}
+.button {
+}
+.slider-button {
 }
