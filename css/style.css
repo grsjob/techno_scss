@@ -30,6 +30,27 @@ a {
 	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 	line-height: 0;
 }
+.general-button {
+	text-align: center;
+	margin: 0;
+	background-color: #ee3643;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+.general-button a {
+	color: inherit;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 18px;
+}
+.button {
+	font: inherit;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	background-color: initial;
+	padding: 0;
+}
 /*Header*/
 
 .page-header {
@@ -145,12 +166,6 @@ a {
 		"caption tel interface"
 		"caption adress .";
 	column-gap: 69px;
-}
-.button {
-	font: inherit;
-	text-align: center;
-	vertical-align: middle;
-	border: none;
 }
 .login-icon {
 	margin-right: 6px;
@@ -287,7 +302,7 @@ a {
 /*Product catalog*/
 
 .product-catalog__list {
-	margin: 0;
+	margin: 59px 0;
 	padding: 0;
 	list-style: none;
 	display: grid;
@@ -300,7 +315,8 @@ a {
 	gap: 20px;
 }
 .catalog-item {
-	background-color: #5fbb2d;
+	overflow: hidden;
+	display: grid;
 }
 .catalog-item:nth-child(1) {
 	grid-area: materials;
@@ -323,13 +339,35 @@ a {
 	background-color: #ffbf47;
 }
 .new-product {
+	transform: translate(230px, 10px) rotate(45deg);
+	padding: 0px 0px 0px 0px;
+	background-color: #ee3643;
+	text-transform: uppercase;
+	display: flex;
+	font-size: 14px;
+	line-height: 18px;
+	width: 100px;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
 }
 .catalog-item__title {
-	margin-block: 0;
+	margin: 0;
 }
 
 .catalog-item__button {
+	width: 135px;
+	height: 38px;
+	background-color: rgba(255, 255, 255, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: inherit;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 18px;
 }
+
 .catalog-item__icon {
 }
 
@@ -344,7 +382,7 @@ a {
 	grid-template-rows: min-content 1fr min-content;
 	grid-template-columns: 24px min-content 1fr min-content 20px;
 	grid-template-areas:
-		"title title title title title"
+		". title title title title"
 		". left-shape . right-shape ."
 		". button button . .";
 	height: 100%;
@@ -360,7 +398,11 @@ a {
 	grid-area: title;
 }
 .slider-title {
-	margin: 0;
+	margin: 23px 0 5px 0;
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 .slider-text {
 	margin: 0;
@@ -375,4 +417,7 @@ a {
 .slider-button {
 	grid-area: button;
 	justify-self: start;
+	padding-left: 46px;
+	padding-right: 46px;
+	margin-bottom: 27px;
 }
