@@ -18,7 +18,7 @@ a {
 	font-weight: 400;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	min-height: 100vh;
+	height: 100vh;
 }
 .container {
 	max-width: 940px;
@@ -151,8 +151,6 @@ a {
 	text-align: center;
 	vertical-align: middle;
 	border: none;
-
-	background: #ffffff;
 }
 .login-icon {
 	margin-right: 6px;
@@ -169,6 +167,7 @@ a {
 	color: #000000;
 	font-size: 21px;
 	line-height: 21px;
+	background: #ffffff;
 }
 .adress {
 	font-size: 14px;
@@ -293,7 +292,7 @@ a {
 	list-style: none;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, max-content);
+	grid-template-rows: repeat(3, 1fr);
 	grid-template-areas:
 		"materials tools technics"
 		"slider slider discounts"
@@ -328,8 +327,7 @@ a {
 .catalog-item__title {
 	margin-block: 0;
 }
-.button {
-}
+
 .catalog-item__button {
 }
 .catalog-item__icon {
@@ -337,20 +335,29 @@ a {
 
 /*Promo slider*/
 .promo-slider {
-	min-height: 100%;
 }
 .catalog-slider {
 	grid-area: slider;
 }
+.slide {
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	grid-template-columns: 24px min-content 1fr min-content 20px;
+	grid-template-areas:
+		"title title title title title"
+		". left-shape . right-shape ."
+		". button button . .";
+	height: 100%;
+}
 .slide-perforators {
-	background: url("/img/perforators.jpg") no-repeat;
-	min-height: 100%;
+	background: url("/img/perforators.jpg") no-repeat center / cover;
 }
 .slide-drills {
-	background: url("/img/drills.jpg") no-repeat;
+	background: url("/img/drills.jpg") no-repeat center / cover;
 	display: none;
 }
 .slider-title-box {
+	grid-area: title;
 }
 .slider-title {
 	margin: 0;
@@ -359,8 +366,13 @@ a {
 	margin: 0;
 }
 .slider-shape__left {
+	grid-area: left-shape;
 }
-.button {
+.slider-shape__right {
+	grid-area: right-shape;
 }
+
 .slider-button {
+	grid-area: button;
+	justify-self: start;
 }
