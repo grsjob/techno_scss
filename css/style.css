@@ -317,10 +317,20 @@ a {
 .catalog-item {
 	overflow: hidden;
 	display: grid;
+	grid-template-columns: 23px min-content 1fr;
+	grid-template-rows: 20px max-content 14px max-content 21px;
+	grid-template-areas:
+		". . icon"
+		". title icon"
+		". . icon"
+		". button icon"
+		" . . icon";
 }
 .catalog-item:nth-child(1) {
 	grid-area: materials;
 	background-color: #ffbf47;
+}
+.item-content {
 }
 .catalog-item:nth-child(2) {
 	grid-area: tools;
@@ -353,6 +363,10 @@ a {
 }
 .catalog-item__title {
 	margin: 0;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 30px;
+	grid-area: title;
 }
 
 .catalog-item__button {
@@ -366,9 +380,14 @@ a {
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 18px;
+	grid-area: button;
 }
 
 .catalog-item__icon {
+	grid-area: icon;
+	display: block;
+	justify-self: center;
+	align-self: center;
 }
 
 /*Promo slider*/
@@ -380,12 +399,27 @@ a {
 .slide {
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
-	grid-template-columns: 24px min-content 1fr min-content 20px;
+	grid-template-columns: 24px max-content max-content 79px min-content 1fr min-content 20px;
 	grid-template-areas:
-		". title title title title"
-		". left-shape . right-shape ."
-		". button button . .";
+		". title title title title title title title"
+		". left-shape .  . . . right-shape ."
+		". button button . pagination . . .";
 	height: 100%;
+}
+.pagination-box {
+	display: flex;
+	grid-area: pagination;
+}
+.pagination {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	border: #ffffff 4px;
+}
+.pagination_checked {
+	background-color: red;
+	border: #ffffff 4px;
 }
 .slide-perforators {
 	background: url("/img/perforators.jpg") no-repeat center / cover;
