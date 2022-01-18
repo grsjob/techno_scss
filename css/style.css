@@ -476,15 +476,18 @@ a {
 /*Popular goods*/
 
 .popular-goods {
+	margin-bottom: 70px;
 }
-.popular-goods__title-box {
+.title-box {
 	display: flex;
 	justify-content: space-between;
 	background: #f9f5f0;
 	align-items: center;
+}
+.popular-goods__title-box {
 	margin-bottom: 20px;
 }
-.popular-goods__title {
+.title-box__title {
 	font-size: 30px;
 	line-height: 30px;
 	color: #32425c;
@@ -516,12 +519,11 @@ a {
 .item-popular {
 }
 .item-popular__new {
-	transform: translate(135px, 10px) rotate(45deg);
+	transform: translate(131px, 7px) rotate(45deg);
 
 }
 .icon-box{
 	display: grid;
-	/* max-height: 154px; */
 	position: relative;
 }
 .item-popular__icon {
@@ -531,16 +533,15 @@ a {
 	margin: auto;
 	
 }
-/* .item-popular:hover{
-	display: none;
-} */
 .item-popular__buy-button {
-	background: #63A63E;
+background: #63A63E;
 box-shadow: inset 0px -3px 0px #367315;
 border-radius: 2px;
 margin-bottom: 10px;
 margin-top: 8px;
-
+margin-left: 22px;
+margin-right: 22px;
+opacity: 0;
 }
 .item-popular__bookmarks-button {
 	border: 3px solid #63A63E;
@@ -549,6 +550,9 @@ border-radius: 2px;
 background-color: inherit;
 color: #32425C;
 margin-bottom: 54px;
+margin-left: 22px;
+margin-right: 22px;
+opacity: 0;
 }
 .item-popular__title {
 	font-family: "PT Sans", "Arial", sans-serif;
@@ -577,9 +581,9 @@ margin-bottom: 54px;
 	font-size: 17px;
 	line-height: 18px;
 	margin-top: 13px;
-/* 	margin-bottom: 21px;
-	margin-right: 30px; */
-	margin-left: 15px;
+	margin-bottom: 21px;
+	margin-right: 32px;
+	margin-left: 25px;
 	position: relative;
 
 }
@@ -589,4 +593,28 @@ margin-bottom: 54px;
 	border: 19px solid transparent; 
 	border-left: 20px solid #ee3643;
 	right: -39px; bottom: 0;
+}
+
+/*Popular-Manufacturers*/
+
+.popular-manufacturers {
+	margin-bottom: 70px;
+}
+.popular-manufacturers__title{
+	margin-bottom: 20px;
+}
+.popular-manufacturers__list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 20px;
+}
+.popular-manufacturers__item {
+	align-self: center;
+	justify-self: center;
+}
+.popular-manufacturer__logo {
 }
