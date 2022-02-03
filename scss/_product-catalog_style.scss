@@ -1,0 +1,153 @@
+/*Product catalog*/
+.product-catalog {
+	&__list {
+		@include list-style-none;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-areas:
+			"materials tools technics"
+			"slider slider discounts"
+			"slider slider delivery";
+		gap: 20px;
+		margin-bottom: 70px;
+	}
+}
+.catalog-item {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 23px min-content 1fr;
+	grid-template-rows: 20px max-content 14px max-content 21px;
+	grid-template-areas:
+		". . icon"
+		". title icon"
+		". . icon"
+		". button icon"
+		" . . icon";
+	&:nth-child(1) {
+		grid-area: materials;
+		background-color: var(--special-yellow);
+	}
+	&:nth-child(2) {
+		grid-area: tools;
+		background-color: var(--special-blue);
+	}
+	&:nth-child(3) {
+		grid-area: technics;
+		background-color: var(--special-lilac);
+	}
+	&:nth-child(4) {
+		grid-area: discounts;
+		background-color: var(--special-greenlight);
+	}
+	&:nth-child(5) {
+		grid-area: delivery;
+		background-color: var(--status-warning);
+	}
+	&__title {
+		@include product-card-header;
+		margin: 0;
+		grid-area: title;
+	}
+
+	&__button {
+		@include general-button-text;
+		min-width: 135px;
+		min-height: 38px;
+		grid-area: button;
+		background-color: rgba(255, 255, 255, 0.3);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__icon {
+		grid-area: icon;
+		display: block;
+		justify-self: center;
+		align-self: center;
+	}
+}
+.new {
+	@include new(230px, 10px);
+}
+/*Promo slider*/
+.catalog-slider {
+	grid-area: slider;
+}
+.slide {
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	grid-template-columns: 24px max-content max-content 79px min-content 1fr min-content 20px;
+	grid-template-areas:
+		". title title title title title title title"
+		". left-shape .  . . . right-shape ."
+		". button button . pagination . . .";
+	height: 100%;
+}
+.slider-title-box {
+	grid-area: title;
+}
+.slider-title {
+	@include title-bolt-text;
+	margin: 23px 0 5px 0;
+}
+.slider-text {
+	margin: 0;
+}
+.slider-shape {
+	&__left {
+		grid-area: left-shape;
+		background-color: transparent;
+	}
+
+	&__right {
+		grid-area: right-shape;
+		background-color: transparent;
+	}
+}
+.slider-button {
+	@include general-button-text;
+	grid-area: button;
+	justify-self: start;
+	padding-left: 46px;
+	padding-right: 46px;
+	margin-bottom: 27px;
+}
+.pagination-box {
+	display: flex;
+	grid-area: pagination;
+}
+.pagination {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: var(--basic-white);
+	border: var(--basic-white) 4px;
+	position: relative;
+	margin-right: 10px;
+	margin-top: 19px;
+	&_checked {
+		background-color: var(--basic-red);
+		width: 6px;
+		height: 6px;
+		position: absolute;
+		border-radius: 50%;
+		transform: translate(35%, 35%);
+	}
+}
+.slide-perforators {
+	background-color: var(--basic-dark-menu);
+	background-image: url("../img/perforators.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.slide-drills {
+	background-image: url("../img/drills.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: none;
+	background-color: var(--basic-dark-menu);
+}
