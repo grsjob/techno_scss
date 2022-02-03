@@ -1,0 +1,171 @@
+/*Header*/
+.main-logo {
+  background: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  line-height: 0;
+}
+
+.page-header {
+  background-color: var(--basic-background);
+}
+
+.header-title {
+  background-color: var(--basic-dark-menu);
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  max-height: 42px;
+}
+
+.header-logo {
+  padding: 12px 56px 17px 55px;
+  position: relative;
+  left: 0;
+  top: 2.5px;
+}
+
+//.search-form {
+//}
+
+.header-site-search {
+  min-width: 272px;
+  min-height: 42px;
+}
+
+.cart-interface {
+  &__list {
+    @include list-style-none;
+    display: flex;
+    align-items: center;
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  //&__item {
+  //}
+}
+
+.header-cart-interface {
+  margin-left: 20px;
+}
+
+.bookmarks {
+  margin-left: 20px;
+  margin-right: 50px;
+
+  & a::before {
+    content: url("../img/icons/bookmarks.svg");
+    margin-right: 9px;
+  }
+}
+
+.cart {
+  margin-right: 26px;
+
+  & a::before {
+    content: url("../img/icons/cart.svg");
+    margin-right: 9px;
+  }
+}
+
+.make-order {
+  background-color: var(--status-success);
+  padding: 9px 16px 9px 19px;
+}
+.header-content {
+  margin-top: 41px;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: auto max-content 1fr;
+  grid-template-areas:
+		"caption tel interface"
+		"caption adress .";
+  column-gap: 69px;
+}
+.header-caption {
+  @include italic-text;
+  grid-area: caption;
+  margin: 0;
+  //padding-right: 24px;
+  padding-left: 27px;
+}
+
+.tel-box {
+  padding: 0;
+  border: 3px solid var(--basic-white);
+  display: inline-block;
+  grid-area: tel;
+  text-align: center;
+  align-self: center;
+  & a{
+    @include phone-text;
+    color: var(--basic-red);
+  }
+}
+
+.adress {
+  @include header-main-text;
+  grid-area: adress;
+  margin: 0;
+}
+
+.header-user-interface {
+  grid-area: interface;
+  justify-self: end;
+}
+
+.user-interface {
+  @include list-style-none;
+  &__item {
+    display: inline-block;
+    margin-left: 10px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+}
+
+.come-in {
+  @include header-button-text;
+  padding: 12px 27px 12px 19px;
+}
+
+.login-icon {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.registration {
+  @include header-button-text;
+  padding: 12px 24px;
+}
+
+.header-site-navigation {
+  margin-top: 40px;
+  background: var(--basic-menu);
+  margin-bottom: 60px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+}
+
+.site-navigation-list {
+  @include list-style-none;
+  display: flex;
+  gap: 56px;
+}
+
+.site-navigation {
+  &__item {
+    &:last-child{
+      padding-right: 0;
+    }
+    & a{
+      color: inherit;
+    }
+  }
+}

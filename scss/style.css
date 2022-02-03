@@ -1,0 +1,288 @@
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --basic-white: #FFFFFF;
+  --basic-dark: #000000;
+  --basic-dark-menu: #293449;
+  --basic-menu: #32425C;
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+  --status-success: #5FBB2D;
+  --status-warning: #FFBF47;
+  --status-error: #BA2732;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Cuprum"), url("/fonts/cuprum.woff2"), url("/fonts/cuprum.woff");
+}
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: italic;
+  src: local("Cuprum"), url("/fonts/cuprumitalic.woff2"), url("/fonts/cuprumitalic.woff");
+}
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 800;
+  font-style: normal;
+  src: local("Cuprum"), url("/fonts/cuprumbold.woff2"), url("/fonts/cuprumbold.woff");
+}
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 800;
+  font-style: italic;
+  src: local("Cuprum"), url("/fonts/cuprumbolditalic.woff2"), url("/fonts/cuprumbolditalic.woff");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("PT Sans"), url("/fonts/ptsans.woff2"), url("/fonts/ptsans.woff");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 800;
+  font-style: normal;
+  src: local("PT Sans"), url("/fonts/ptsansbold.woff2"), url("/fonts/ptsansbold.woff");
+}
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-body {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--basic-white);
+  line-height: 24px;
+  background-color: var(--basic-white);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.button {
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.general-button {
+  text-align: center;
+  margin: 0;
+  background-color: var(--basic-red);
+  padding-top: 11px;
+  padding-bottom: 9px;
+}
+
+/*Header*/
+.main-logo {
+  background: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  line-height: 0;
+}
+
+.page-header {
+  background-color: var(--basic-background);
+}
+
+.header-title {
+  background-color: var(--basic-dark-menu);
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  max-height: 42px;
+}
+
+.header-logo {
+  padding: 12px 56px 17px 55px;
+  position: relative;
+  left: 0;
+  top: 2.5px;
+}
+
+.header-site-search {
+  min-width: 272px;
+  min-height: 42px;
+}
+
+.cart-interface__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.cart-interface__list a {
+  color: inherit;
+}
+
+.header-cart-interface {
+  margin-left: 20px;
+}
+
+.bookmarks {
+  margin-left: 20px;
+  margin-right: 50px;
+}
+.bookmarks a::before {
+  content: url("../img/icons/bookmarks.svg");
+  margin-right: 9px;
+}
+
+.cart {
+  margin-right: 26px;
+}
+.cart a::before {
+  content: url("../img/icons/cart.svg");
+  margin-right: 9px;
+}
+
+.make-order {
+  background-color: var(--status-success);
+  padding: 9px 16px 9px 19px;
+}
+
+.header-content {
+  margin-top: 41px;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: auto max-content 1fr;
+  grid-template-areas: "caption tel interface" "caption adress .";
+  column-gap: 69px;
+}
+
+.header-caption {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--basic-red);
+  line-height: 23px;
+  grid-area: caption;
+  margin: 0;
+  padding-left: 27px;
+}
+
+.tel-box {
+  padding: 0;
+  border: 3px solid var(--basic-white);
+  display: inline-block;
+  grid-area: tel;
+  text-align: center;
+  align-self: center;
+}
+.tel-box a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--basic-white);
+  line-height: 30px;
+  color: var(--basic-red);
+}
+
+.adress {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--basic-dark);
+  line-height: 24px;
+  grid-area: adress;
+  margin: 0;
+}
+
+.header-user-interface {
+  grid-area: interface;
+  justify-self: end;
+}
+
+.user-interface {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.user-interface__item {
+  display: inline-block;
+  margin-left: 10px;
+}
+.user-interface__item:first-child {
+  margin-left: 0;
+}
+
+.come-in {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--basic-dark);
+  line-height: 21px;
+  padding: 12px 27px 12px 19px;
+}
+
+.login-icon {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.registration {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--basic-dark);
+  line-height: 21px;
+  padding: 12px 24px;
+}
+
+.header-site-navigation {
+  margin-top: 40px;
+  background: var(--basic-menu);
+  margin-bottom: 60px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+}
+
+.site-navigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 56px;
+}
+
+.site-navigation__item:last-child {
+  padding-right: 0;
+}
+.site-navigation__item a {
+  color: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */

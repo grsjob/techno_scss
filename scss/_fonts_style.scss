@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: normal;
+  src: local('Cuprum'),
+  url("/fonts/cuprum.woff2"),
+  url("/fonts/cuprum.woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: italic;
+  src: local('Cuprum'),
+  url("/fonts/cuprumitalic.woff2"),
+  url("/fonts/cuprumitalic.woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 800;
+  font-style: normal;
+  src: local('Cuprum'),
+  url("/fonts/cuprumbold.woff2"),
+  url("/fonts/cuprumbold.woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 800;
+  font-style: italic;
+  src: local('Cuprum'),
+  url("/fonts/cuprumbolditalic.woff2"),
+  url("/fonts/cuprumbolditalic.woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local('PT Sans'),
+  url("/fonts/ptsans.woff2"),
+  url("/fonts/ptsans.woff");
+}
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 800;
+  font-style: normal;
+  src: local('PT Sans'),
+  url("/fonts/ptsansbold.woff2"),
+  url("/fonts/ptsansbold.woff");
+}
+
+@mixin title-text {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 30px;
+    weight: 400;
+  }
+  color: var(--basic-dark);
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+@mixin title-bolt-text {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 36px;
+    weight: 800;
+  }
+  color: var(--basic-white);
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+@mixin product-card-header {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 24px;
+    weight: 800;
+  }
+  color: var(--basic-white);
+  line-height: 30px;
+}
+
+@mixin text-menu {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 18px;
+    weight: 400;
+  }
+  color: var(--basic-white);
+  line-height: 24px;
+}
+
+@mixin basic-menu-text {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 18px;
+    weight: 400;
+  }
+  color: var(--basic-white);
+  line-height: 24px;
+}
+
+@mixin phone-text {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 21px;
+    weight: 800;
+  }
+  color: var(--basic-white);
+  line-height: 30px;
+}
+@mixin italic-text {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 16px;
+    weight: 400;
+    style: italic;
+  }
+  color: var(--basic-red);
+  line-height: 23px;
+}
+@mixin footer-text {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 16px;
+    weight: 400;
+  }
+  color: var(--basic-white);
+  line-height: 18px;
+}
+
+@mixin general-button-text {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 14px;
+    weight: 400;
+  }
+  color: var(--basic-white);
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@mixin header-button-text {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 21px;
+    weight: 400;
+  }
+  color: var(--basic-dark);
+  line-height: 21px;
+}
+
+@mixin header-main-text {
+  font: {
+    family: "Cuprum", "Arial", sans-serif;
+    size: 14px;
+    weight: 400;
+  }
+  color: var(--basic-dark);
+  line-height: 24px;
+}
+
+@mixin popular-product-button-text{
+  font: {
+    family: "PT Sans", "Arial", sans-serif;
+    size: 17px;
+    weight: 800;
+  }
+  color: var(--basic-white);
+  line-height: 18px;
+  text-transform: uppercase;
+}
+@mixin main-text{
+  font: {
+    family: "PT Sans", "Arial", sans-serif;
+    size: 13px;
+    weight: 400;
+  }
+  color: var(--basic-dark);
+  line-height: 24px;
+}
+
+@mixin popular-product-title-text{
+  font: {
+    family: "PT Sans", "Arial", sans-serif;
+    size: 18px;
+    weight: 800;
+  }
+  color: var(--basic-dark);
+  line-height: 20px;
+}

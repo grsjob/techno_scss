@@ -56,7 +56,6 @@ a {
 	width: 1px;
 	height: 1px;
 	margin: -1px;
-	…
  }
 /*Header*/
 
@@ -438,11 +437,19 @@ a {
 	transform: translate(35%, 35%);
 }
 .slide-perforators {
-	background: url("/img/perforators.jpg") no-repeat center / cover;
+	background-color: #293449;
+	background-image: url("../img/perforators.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	
 }
 .slide-drills {
-	background: url("/img/drills.jpg") no-repeat center / cover;
+	background-color: #293449;
+	background-image: url("/img/drills.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	display: none;
 }
 .slider-title-box {
