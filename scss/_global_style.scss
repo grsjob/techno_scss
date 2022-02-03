@@ -1,43 +1,62 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 .page-body {
-  @include basic-menu-text;
-  background-color: var(--basic-white);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
+	@include basic-menu-text;
+	background-color: var(--basic-white);
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	height: 100vh;
 }
 .container {
-  max-width: 940px;
-  margin: 0 auto;
+	max-width: 940px;
+	margin: 0 auto;
 }
 .button {
-  text-align: center;
-  vertical-align: middle;
-  border: none;
-  padding: 0;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	padding: 0;
 }
 .visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
 }
 .general-button {
-  text-align: center;
-  margin: 0;
-  background-color: var(--basic-red);
-  padding-top: 11px;
-  padding-bottom: 9px;
+	text-align: center;
+	margin: 0;
+	background-color: var(--basic-red);
+	padding-top: 11px;
+	padding-bottom: 9px;
 }
 
-@mixin list-style-none{
-  list-style: none;
-  margin: 0;
-  padding: 0;
+@mixin list-style-none {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@mixin main-logo {
+	display: inline-block;
+	background-color: var(--basic-red);
+	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+	line-height: 0;
+}
+@mixin new($translate...) {
+	@include general-button-text;
+	background-color: var(--basic-red);
+	width: 100px;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+	z-index: 4;
+	display: flex;
+	padding: 0px 0px 0px 0px;
+	transform: translate($translate) rotate(45deg);
 }
