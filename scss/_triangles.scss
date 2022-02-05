@@ -1,0 +1,36 @@
+@mixin triangle-top($triangle-height, $base-width, $color){
+  border: $base-width solid transparent;
+  border-top: $triangle-height solid $color;
+}
+@mixin triangle-left($triangle-height, $base-width, $color){
+  border: $base-width solid transparent;
+  border-right: $triangle-height solid $color;
+}
+@mixin triangle-bottom($triangle-height, $base-width, $color){
+  border: $base-width solid transparent;
+  border-bottom: $triangle-height solid $color;
+}
+@mixin triangle-right($triangle-height, $base-width, $color){
+  border: $base-width solid transparent;
+  border-left: $triangle-height solid $color;
+}
+@mixin triangle-upper-right-corner($top-side-triangle,$right-side-triangle, $base-width, $color){
+  border: $base-width solid transparent;
+  border-top: $right-side-triangle solid $color;
+  border-right: $top-side-triangle solid $color;
+}
+@mixin triangle-lower-right-corner($bottom-side-triangle,$right-side-triangle, $base-width, $color){
+  border: $base-width solid transparent;
+  border-bottom: $right-side-triangle solid $color;
+  border-right: $bottom-side-triangle solid green;
+}
+@mixin triangle-lower-left-corner($bottom-side-triangle,$left-side-triangle, $base-width, $color){
+  border: $base-width solid transparent;
+  border-bottom: $left-side-triangle solid $color;
+  border-left: $bottom-side-triangle solid $color;
+}
+@mixin triangle-upper-left-corner($top-side-triangle,$right-side-triangle, $base-width, $color){
+  border: $base-width solid transparent;
+  border-top: $right-side-triangle solid $color;
+  border-left: $top-side-triangle solid $color;
+}

@@ -1,0 +1,27 @@
+.popular-manufacturers {
+  margin-bottom: 70px;
+  &__title {
+    @include title-text;
+    color: var(--basic-menu);
+    margin-bottom: 20px;
+
+  }
+
+  &__list {
+    margin-top: 20px;
+    @include list-style-none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 20px;
+  }
+  &__item {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.popular-manufacturer {
+  &__logo {
+    border: 1px solid #EAEAEA;
+
+  }
+}

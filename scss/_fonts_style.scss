@@ -4,13 +4,13 @@
 	font-family: "PT Sans";
 	font-weight: 400;
 	font-style: normal;
-	src: local("PT Sans"), url("/fonts/ptsans.woff2"), url("/fonts/ptsans.woff");
+	src: local("PT Sans"), url("/fonts/PTSans.woff2"), url("/fonts/PTSans.woff");
 }
 @font-face {
 	font-family: "PT Sans";
 	font-weight: 700;
 	font-style: normal;
-	src: local("PT Sans"), url("/fonts/ptsansbold.woff2"), url("/fonts/ptsansbold.woff");
+	src: local("PT Sans"), url("/fonts/PTSansBolt.woff2"), url("/fonts/PTSansBolt.woff");
 }
 
 @mixin title-text {

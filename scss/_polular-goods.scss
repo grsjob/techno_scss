@@ -3,10 +3,7 @@
 	margin-bottom: 70px;
 
 	&__title-box {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: var(--special-beige);
+		margin-bottom: 20px;
 	}
 
 	&__list {
@@ -27,7 +24,10 @@
 	}
 }
 .title-box {
-	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--special-beige);
 	&__title {
 		@include title-text;
 		color: var(--basic-menu);
@@ -102,10 +102,9 @@
 		&::after {
 			content: "";
 			position: absolute;
-			border: 19px solid transparent;
-			border-left: 20px solid var(--basic-red);
 			right: -39px;
 			bottom: 0;
+			@include triangle-right(20px, 19px, var(--basic-red));
 		}
 	}
 	&__new {
