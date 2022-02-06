@@ -101,11 +101,11 @@ a {
 	margin-right: 50px;
 }
 .bookmarks a::before {
-	content: url("/img/icons/bookmarks.svg");
+	content: url("/src/img/icons/bookmarks.svg");
 	margin-right: 9px;
 }
 .cart a::before {
-	content: url("/img/icons/cart.svg");
+	content: url("/src/img/icons/cart.svg");
 	margin-right: 9px;
 }
 .cart {
@@ -438,14 +438,14 @@ a {
 }
 .slide-perforators {
 	background-color: #293449;
-	background-image: url("../img/perforators.jpg");
+	background-image: url("../src/img/perforators.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 .slide-drills {
 	background-color: #293449;
-	background-image: url("/img/drills.jpg");
+	background-image: url("/src/img/drills.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -687,7 +687,7 @@ a {
 .service-info {
 }
 .service-info__delivery {
-	background: url("/img/service-delivery.png") no-repeat right / contain;
+	background: url("/src/img/service-delivery.png") no-repeat right / contain;
 }
 .service-info__title {
 	margin-bottom: 25px;

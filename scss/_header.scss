@@ -48,7 +48,7 @@
   margin-left: 20px;
 
   & a::before {
-    content: url("../img/icons/bookmarks.svg");
+    content: url("../src/img/icons/bookmarks.svg");
     margin-right: 9px;
   }
 }
@@ -57,7 +57,7 @@
   margin-right: 26px;
 
   & a::before {
-    content: url("../img/icons/cart.svg");
+    content: url("../src/img/icons/cart.svg");
     margin-right: 9px;
   }
 }
