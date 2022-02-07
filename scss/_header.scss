@@ -101,6 +101,7 @@
   grid-area: tel;
   text-align: center;
   align-self: center;
+  max-width: 270px;
 
   & a {
     @include phone-text;

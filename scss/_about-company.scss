@@ -1,0 +1,40 @@
+.contacts {
+
+}
+
+.about-company {
+  &__title {
+    @include title-text;
+  }
+
+  &__text {
+    @include main-text;
+  }
+}
+
+.transport-companies {
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__button {
+  }
+}
+
+.company-contacts {
+  &__title {
+    @include title-text;
+  }
+
+  &__text {
+    @include main-text;
+  }
+
+  &__button {
+  }
+}
+
+.map {
+}

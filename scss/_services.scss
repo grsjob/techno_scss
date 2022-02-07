@@ -1,12 +1,15 @@
 .services {
 	background-color: var(--basic-background);
 	min-height: 522px;
+	padding-top: 64px;
+
+
 }
 
 .services-container {
-	padding-top: 64px;
 	display: grid;
 	grid-template-rows: min-content min-content 1fr;
+
 }
 
 .services-title {
@@ -28,14 +31,17 @@
 }
 
 .services-content {
+	align-self: start;
 	display: grid;
 	column-gap: 80px;
 	grid-template-columns: 240px 1fr;
-	height: 100vh;
+	height: 100%;
+	margin-bottom: 99px;
 }
 
 .services-list {
 	@include list-style-none;
+	height: 100%;
 }
 
 .service-item {
@@ -68,6 +74,9 @@
 		background-image: url("/src/img/service-delivery.png");
 		background-repeat: no-repeat;
 		background-position: right top;
+		height: 100%;
+		display: none;
+
 	}
 
 	&__title {
@@ -78,6 +87,10 @@
 	}
 
 	&__guarantee {
+		background-image: url("/src/img/service-guarantee.png");
+		background-repeat: no-repeat;
+		background-position: right top;
+		height: 100%;
 		display: none;
 	}
 
@@ -85,9 +98,15 @@
 	}
 
 	&__credit {
-		display: none;
+		background-image: url("/src/img/service-credit.png");
+		background-repeat: no-repeat;
+		background-position: right top;
+		height: 100%;
+		//display: none;
 	}
 
 	&__button {
+		@include general-button-text;
+
 	}
 }
