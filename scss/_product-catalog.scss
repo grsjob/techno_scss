@@ -16,7 +16,7 @@
 .catalog-item {
 	overflow: hidden;
 	display: grid;
-	grid-template-columns: 23px min-content 1fr;
+	grid-template-columns: 24px min-content 1fr;
 	grid-template-rows: 20px max-content 14px max-content 21px;
 	grid-template-areas:
 		". . icon"
@@ -24,6 +24,9 @@
 		". . icon"
 		". button icon"
 		" . . icon";
+	&:nth-child(n) {
+		background-color: var(--status-warning);
+	}
 	&:nth-child(1) {
 		grid-area: materials;
 		background-color: var(--special-yellow);
@@ -44,6 +47,7 @@
 		grid-area: delivery;
 		background-color: var(--status-warning);
 	}
+
 	&__title {
 		@include product-card-header;
 		margin: 0;
@@ -142,12 +146,13 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	display: none;
 }
 .slide-drills {
 	background-image: url("../src/img/drills.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	display: none;
+	//display: none;
 	background-color: var(--basic-dark-menu);
 }

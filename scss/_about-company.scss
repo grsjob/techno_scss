@@ -1,40 +1,77 @@
 .contacts {
-
+  display: flex;
+  margin-bottom: 70px;
+  column-gap: 179px;
+  //flex-wrap: wrap;
 }
 
 .about-company {
   &__title {
     @include title-text;
+    margin: 0;
+    margin-bottom: 24px;
   }
 
   &__text {
     @include main-text;
+    margin-bottom: 5px;
   }
 }
 
 .transport-companies {
   &__list {
+    @include basic-menu-text;
+    color: var(--basic-dark);
+    @include list-style-none;
+    margin-bottom: 30px;
   }
 
   &__item {
+    margin-bottom: 12px;
+    position: relative;
+    margin-left: 37px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      top: 13px;
+      left: -37px;
+      background-image: url("../src/img/icons/list-icon.png");
+    }
   }
 
   &__button {
+    @include general-button-text;
+    padding: 11px 40px 9px 40px;
   }
 }
 
 .company-contacts {
   &__title {
     @include title-text;
+    margin: 0;
+    margin-bottom: 24px;
   }
 
   &__text {
     @include main-text;
+    margin: 0;
+    margin-bottom: 35px;
   }
 
   &__button {
+    @include general-button-text;
+    padding: 11px 61px 9px 61px;
   }
 }
 
 .map {
+  max-width: 300px;
+  margin-bottom: 20px;
 }

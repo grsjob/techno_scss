@@ -1,112 +1,130 @@
 .services {
-	background-color: var(--basic-background);
-	min-height: 522px;
-	padding-top: 64px;
-
-
+  background-color: var(--basic-background);
+  //min-height: 522px;
+  padding-top: 64px;
+  margin-bottom: 70px;
 }
 
 .services-container {
-	display: grid;
-	grid-template-rows: min-content min-content 1fr;
+  display: grid;
+  grid-template-rows: min-content min-content 1fr;
 
 }
 
 .services-title {
-	@include title-text;
-	margin: 0;
+  @include title-text;
+  margin: 0;
 }
 
 .title-services {
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .services-text {
-	@include main-text;
-	margin: 0;
+  @include main-text;
+  margin: 0;
 }
 
 .text-services {
-	margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 
 .services-content {
-	align-self: start;
-	display: grid;
-	column-gap: 80px;
-	grid-template-columns: 240px 1fr;
-	height: 100%;
-	margin-bottom: 99px;
+  align-self: start;
+  display: grid;
+  column-gap: 80px;
+  grid-template-columns: 240px 1fr;
+  align-items: stretch;
+  margin-bottom: 99px;
 }
 
-.services-list {
-	@include list-style-none;
-	height: 100%;
+.services-list {//TODO list decorate
+  @include list-style-none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .service-item {
-	background-color: rgba(50, 66, 92, 1);
-	padding: 13px 0 17px 22px;
-	box-shadow: 0px 1px 0px var(--basic-dark-menu), inset 0px 1px 0px #405069;
-	&_checked {
-		background: var(---basic-white);
-		box-shadow: 0px 1px 0px var(--basic-white);
-	}
+  background-color: rgba(50, 66, 92, 1);
+  padding: 13px 0 20px 22px;
+  box-shadow: 0px 1px 0px var(--basic-dark-menu), inset 0px 1px 0px #405069;
+  display: flex;
+  width: 238px;
+  height: 61px;
 
-	&__delivery {
-	}
+  &_checked {
+    background-color: var(--basic-white);
+    box-shadow: 0px 1px 0px var(--basic-white);
 
-	&__guarantee {
-	}
+    & .service-button {
+      color: var(--basic-dark-menu);
+    }
+  }
 
-	&__credit {
-	}
+  &__delivery {
+  }
+
+  &__guarantee {
+  }
+
+  &__credit {
+  }
 }
 
 .service-button {
+  @include phone-text;
+  background-color: inherit;
 }
 
 .button {
 }
 
 .service-info {
-	&__delivery {
-		background-image: url("/src/img/service-delivery.png");
-		background-repeat: no-repeat;
-		background-position: right top;
-		height: 100%;
-		display: none;
+  display: flex;
+  flex-direction: column;
+  margin-right: -10px;
 
-	}
+  &__delivery {
+    background-image: url("/src/img/service-delivery.png");
+    background-repeat: no-repeat;
+    background-position: 152px 21px;
+    height: 100%;
+    //display: none;
 
-	&__title {
-		margin-bottom: 25px;
-	}
+  }
 
-	&__text {
-	}
+  &__title {
+    margin-bottom: 28px;
+  }
 
-	&__guarantee {
-		background-image: url("/src/img/service-guarantee.png");
-		background-repeat: no-repeat;
-		background-position: right top;
-		height: 100%;
-		display: none;
-	}
+  &__text {
+    margin-bottom: 25px;
+  }
 
-	&__icon {
-	}
+  &__guarantee {
+    background-image: url("/src/img/service-guarantee.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 100%;
+    display: none;
+  }
 
-	&__credit {
-		background-image: url("/src/img/service-credit.png");
-		background-repeat: no-repeat;
-		background-position: right top;
-		height: 100%;
-		//display: none;
-	}
+  &__icon {
+  }
 
-	&__button {
-		@include general-button-text;
+  &__credit {
+    background-image: url("/src/img/service-credit.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 100%;
+    display: none;
+  }
 
-	}
+  &__button {
+    @include general-button-text;
+    padding: 12px 50px;
+
+  }
 }

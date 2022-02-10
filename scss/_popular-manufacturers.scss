@@ -1,10 +1,14 @@
 .popular-manufacturers {
-  margin-bottom: 70px;
+  margin-bottom: 65px;
+
+  &__title-box {
+    margin-bottom: 20px;
+  }
+
   &__title {
     @include title-text;
     color: var(--basic-menu);
-    margin-bottom: 20px;
-
+    margin-left: 28px;
   }
 
   &__list {
@@ -12,16 +16,28 @@
     @include list-style-none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px 20px;
+    row-gap: 10px;
+    column-gap: 18px;
   }
+
   &__item {
     align-self: center;
     justify-self: center;
   }
 }
+.popular-manufacturers-title-box {
+  &__button {
+    @include general-button-text;
+    padding-left: 40px;
+    padding-right: 36px;
+    margin: 25px 15px 26px 0;
+    color: var(--basic-white);
+  }
+}
+
+
 .popular-manufacturer {
   &__logo {
     border: 1px solid #EAEAEA;
-
   }
 }
