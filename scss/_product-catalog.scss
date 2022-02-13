@@ -78,6 +78,17 @@
 /*Promo slider*/
 .catalog-slider {
 	grid-area: slider;
+	padding: 0;
+	margin: 0;
+}
+.slider-list{
+	@include list-style-none;
+	height: 100%;
+
+	& li{
+		height: 100%;
+
+	}
 }
 .slide {
 	display: grid;
@@ -87,7 +98,6 @@
 		". title title title title title title title"
 		". left-shape .  . . . right-shape ."
 		". button button . pagination . . .";
-	height: 100%;
 }
 .slider-title-box {
 	grid-area: title;
@@ -121,23 +131,22 @@
 .pagination-box {
 	display: flex;
 	grid-area: pagination;
+	position: relative;
 }
 .pagination {
+	//position: absolute;
+	//left: 0;
+	//top: 0;
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
 	background-color: var(--basic-white);
-	border: var(--basic-white) 4px;
-	position: relative;
+	border: 2px solid var(--basic-white) ;
 	margin-right: 10px;
 	margin-top: 19px;
-	&_checked {
+	&:active {
 		background-color: var(--basic-red);
-		width: 6px;
-		height: 6px;
-		position: absolute;
-		border-radius: 50%;
-		transform: translate(35%, 35%);
+		border: 2px solid var(--basic-white) ;
 	}
 }
 .slide-perforators {
@@ -146,13 +155,13 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	display: none;
+	//display: none;
 }
 .slide-drills {
 	background-image: url("../src/img/drills.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	//display: none;
+	display: none;
 	background-color: var(--basic-dark-menu);
 }
