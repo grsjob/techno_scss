@@ -158,6 +158,10 @@
   }
 }
 
+.page-header-perforators .cart {
+  background-color: var(--basic-red);
+}
+
 
 .make-order {
   background-color: var(--status-success);
@@ -174,7 +178,13 @@
 		"caption tel interface"
 		"caption adress .";
   column-gap: 69px;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
+}
+
+.page-header-perforators .header-content {
+  grid-template-areas:
+		"caption tel user"
+		"caption adress personal-menu";
 }
 
 .header-caption {
@@ -182,6 +192,7 @@
   grid-area: caption;
   margin: 0;
   padding-left: 30px;
+  min-width: 227px;
 
 }
 
@@ -211,7 +222,7 @@
 .adress {
   @include header-main-text;
   grid-area: adress;
-  margin: 0 0 0 22px;
+  margin: 3px 0 0 30px;
 
 }
 
@@ -223,6 +234,77 @@
   & li:not(:last-child) {
     margin-right: 5px;
   }
+}
+
+.user {
+  margin-left: -16px;
+  padding: 10px 18px 10px 14px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include header-button-text;
+  grid-area: user;
+  width: 299px;
+  height: 45px;
+
+  &:hover {
+    & svg path {
+      fill: var(--basic-grey);
+    }
+  }
+
+  &:active {
+    color: var(--basic-greylight);
+
+    & svg path {
+      fill: var(--basic-greylight);
+    }
+  }
+
+}
+
+
+.catalog-user-interface {
+  @include list-style-none;
+  padding: 0 25px;
+  grid-area: personal-menu;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  & li:not(:last-child) {
+    margin-right: 33px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 4px;
+      height: 4px;
+      right: -19px;
+      top: 9px;
+      position: absolute;
+      background-color: var(--basic-menu);
+      border-radius: 50%;
+    }
+  }
+
+  & a {
+    @include footer-text;
+    color: var(--basic-menu);
+
+    &:hover {
+      color: var(--basic-red);
+    }
+
+    &:active {
+      color: var(--basic-greylight);
+    }
+  }
+}
+
+.personal-room {
+  grid-area: personal-menu;
 }
 
 .user-interface {
@@ -246,6 +328,7 @@
   &:hover + .come-in__icon path {
     fill: var(--basic-grey);
   }
+
   &:active + .come-in__icon path {
     fill: var(--basic-greylight);
   }
@@ -265,6 +348,7 @@
 .registration:hover {
   color: var(--basic-red);
 }
+
 .come-in:active,
 .registration:active {
   color: var(--basic-greylight);
@@ -295,32 +379,34 @@
   justify-content: space-between;
   padding: 0 28px;
 
-& li{
-  min-height: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  max-width: 150px;
-}
+  & li {
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 150px;
+  }
 }
 
 .site-navigation {
   &__item {
-    display: flex;     //TODO block navigation
+    display: flex;
     justify-content: center;
+
     & a {
       color: inherit;
       padding-left: 25px;
-      padding-right: 25px ;
+      padding-right: 25px;
     }
   }
 }
 
-.site-navigation-list li:hover{
+.site-navigation-list li:hover {
   background-color: var(--basic-dark-menu);
   box-shadow: inset 0px -5px 0px var(--basic-dark-menu);
 }
-.site-navigation-list li:active{
+
+.site-navigation-list li:active {
   background-color: var(--basic-dark-menu);
   box-shadow: inset 0px -5px 0px var(--basic-dark-menu);
   opacity: 0.5;

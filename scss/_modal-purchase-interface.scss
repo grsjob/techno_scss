@@ -1,0 +1,62 @@
+.modal-purchase-interface {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 0;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  width: 620px;
+  min-height: 282px;
+  margin: auto;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
+
+  &__text {
+    position: relative;
+    min-height: 163px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    @include product-card-header;
+    flex-grow: 0;
+    color: var(--basic-dark);
+
+    &::before {
+      content: "";
+      left: 81px;
+      top: 48px;
+      position: absolute;
+      width: 66px;
+      height: 66px;
+      background-image: url("/src/img/icons/icon-mark.svg");
+    }
+  }
+}
+
+.purchase-interface-footer .button {
+  min-width: 192px;
+}
+
+.checkout.button {
+  color: var(--basic-white);
+  @include general-button-text;
+}
+
+.continue-shopping.button {
+  @include general-button-text;
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
+}
+
+.purchase-interface-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #F4F4F4;
+  flex-grow: 3;
+  height: 100%;
+}

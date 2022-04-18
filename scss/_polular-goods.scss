@@ -9,7 +9,7 @@
     @include list-style-none;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 19px;
   }
 
   &__item {
@@ -19,7 +19,14 @@
     overflow: hidden;
     border: 1px solid #eaeaea;
     grid-template-columns: 218px;
-    max-height: 318px;
+    min-height: 318px;
+    transition: box-shadow 100ms ease-in-out;
+&:hover{
+  box-shadow: 0 1px 10px 1px var(--basic-greylight);
+}
+    &:hover .icon-box {
+      display: none;
+    }
   }
 }
 
@@ -41,6 +48,7 @@
     padding-right: 24px;
     margin: 25px 15px 26px 0;
     color: var(--basic-white);
+    max-width: 350px;
   }
 }
 
@@ -48,35 +56,68 @@
   &__icon {
     position: absolute;
     z-index: 2;
-bottom: 0;
+    bottom: 0;
     right: 7px;
-    margin: auto;
+    margin: -151px auto;
     left: 0;
-    top: 145px;
+    top: 138px;
 
   }
-
+&:hover .item-popular__buy-button ,
+&:hover .item-popular__bookmarks-button {
+opacity: 1;
+}
+  .goods-item__button {
+    width: 135px;
+    height: 38px;
+    border-radius: 2px;
+  }
   &__buy-button {
+    position: relative;
+    @include general-button-text;
     background: var(--basic-green);
     box-shadow: inset 0px -3px 0px #367315;
-    border-radius: 2px;
     margin-bottom: 10px;
     margin-top: 8px;
-    margin-left: 22px;
-    margin-right: 22px;
+    margin-left: auto;
+    margin-right: auto;
     opacity: 0;
+    &:hover{
+      background-color: #5FBB2D;
+    }
+    &:active{
+      background-color: #518534;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 30px;
+      width: 15px;
+      height: 15px;
+      background-image: url("/src/img/icons/icon-cart.png");
+    }
+  }
+  .goods-item__button.item-popular__buy-button{
+    padding-left: 15px;
   }
 
   &__bookmarks-button {
-    border: 3px solid var(--basic-green);
-    box-sizing: border-box;
-    border-radius: 2px;
-    background-color: inherit;
+    @include general-button-text;
     color: var(--basic-menu);
+    border: 3px solid var(--basic-green);
+    background-color: inherit;
     margin-bottom: 54px;
-    margin-left: 22px;
-    margin-right: 22px;
+    margin-left: auto;
+    margin-right: auto;
     opacity: 0;
+    &:hover{
+      border: 3px solid var(--basic-menu);
+    }
+    &:active{
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
   }
 
   &__title {
@@ -85,6 +126,8 @@ bottom: 0;
     margin-bottom: 7px;
     padding-left: -1px;
     text-align: center;
+    min-height: 40px;
+
   }
 
   &__old-price {
@@ -98,11 +141,12 @@ bottom: 0;
   &__discount-price {
     @include popular-product-button-text;
     margin-top: 11px;
-    margin-bottom: 24px;
+    margin-bottom: 21px;
     margin-right: 50px;
     margin-left: 44px;
     position: relative;
     display: inline-block;
+    min-width: 124px;
 
     &::after {
       content: "";
@@ -119,6 +163,7 @@ bottom: 0;
 }
 
 .icon-box {
-  display: grid;
   position: relative;
+  transition: display 1s linear;
+
 }

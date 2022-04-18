@@ -7,6 +7,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 console.log(mode + '  mode')
 module.exports = {
+    entry: '/src/index.js',
     mode: mode,
     output: {
         assetModuleFilename: "assets/[hash][ext][query]",
@@ -19,7 +20,12 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: "index.html"
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'catalog.html',
+            template: "catalog.html"
         })],
+
     module: {
         rules: [
             {

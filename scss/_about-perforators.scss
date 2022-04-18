@@ -1,0 +1,14 @@
+.about-perforators {
+  background-color: var(--basic-background);
+  padding-top: 64px;
+  padding-bottom: 68px;
+  &__title {
+    @include title-text;
+    margin: 0 0 25px 0;
+  }
+
+  &__text {
+    @include main-text;
+    margin: 0;
+  }
+}

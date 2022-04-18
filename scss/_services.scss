@@ -44,15 +44,36 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  counter-reset: list-counter;
+  &:after{
+    content: "";
+    width: 10px;
+    height: 279px;
+    position: absolute;
+    right: 2px;
+    top: -48px;
+    background-image: url("/src/img/shadow-services.png");
+    //background-color: var(--basic-background);
+    //box-shadow: -3px 1px 10px 1px var(--basic-greylight);
+  }
 }
 
 .service-item {
   background-color: rgba(50, 66, 92, 1);
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
   padding: 13px 0 20px 22px;
-  box-shadow: 0px 1px 0px var(--basic-dark-menu), inset 0px 1px 0px #405069;
   display: flex;
   width: 238px;
   height: 61px;
+  &:hover{
+    background-color: var(--basic-dark-menu);
+    box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+    & .service-button{
+      color: var(--basic-white);
+    }
+  }
+
 
   &_checked {
     background-color: var(--basic-white);
@@ -61,15 +82,6 @@
     & .service-button {
       color: var(--basic-dark-menu);
     }
-  }
-
-  &__delivery {
-  }
-
-  &__guarantee {
-  }
-
-  &__credit {
   }
 }
 

@@ -1,0 +1,125 @@
+
+.modal-feedback {
+  position: relative;
+  left: 0;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  max-width: 620px;
+  min-height: 430px;
+  margin:  auto;
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
+}
+.feedback-form{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.feedback-form .modal-container{
+  display: grid;
+  grid-template-rows: repeat(3,min-content) 114px 1fr;
+  grid-template-columns:repeat(2, 1fr);
+  column-gap: 20px;
+  grid-template-areas:
+    "l-n l-e"
+    "i-n i-e"
+    "l-a l-a"
+    "a a";
+}
+
+.modal-container {
+  width: 460px;
+  margin: 0 auto;
+  padding-top:39px;
+
+  & label {
+    @include basic-menu-text;
+    color: var(--basic-dark);
+  }
+  & input,
+  & textarea{
+    border: 2px solid var(--basic-greylight);
+    border-radius: 2px;
+  }
+}
+
+.feedback-name{
+  grid-area: l-n;
+
+}
+.feedback-email {
+  grid-area: l-e;
+}
+
+.feedback-name + input{
+  grid-area: i-n;
+
+}
+.feedback-email + input {
+  grid-area: i-e;
+}
+.feedback-email + input,
+.feedback-name + input{
+  height: 38px;
+}
+.feedback-email,
+.feedback-name{
+  margin-bottom: 11px;
+}
+
+.feedback-main-text {
+  margin-top: 14px;
+  margin-bottom: 10px;
+  grid-area: l-a;
+
+  & + textarea {
+    grid-area: a;
+  }
+}
+.modal-wrapper{
+  width: 460px;
+  margin: 0 auto;
+  padding: 74px 0;
+}
+.modal-form {
+  &__button {
+    @include general-button-text;
+    width: 100%;
+  }
+}
+.feedback-form-footer{
+  background-color: #F4F4F4;
+  flex-grow: 3;
+}
+.modal-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: var(--basic-red);
+
+}
+
+.modal-close::after {
+  transform: rotate(45deg);
+}
+
+.modal-close::before {
+  transform: rotate(-45deg);
+}
